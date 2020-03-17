@@ -1,5 +1,7 @@
 import customProtocolCheck from 'custom-protocol-check';
 
+import styles from './index.module.css';
+
 
 export default function (app, options) {
     app.addRouteListener('courses.*', function (params) {
@@ -8,7 +10,7 @@ export default function (app, options) {
 
             if (link === null) return;
 
-            let popup = link.closest('#msteams-link-popup');
+            let popup = link.closest(`#${styles.msteamsLinkPopup}`);
 
             if (popup !== null) return;
 
@@ -21,7 +23,7 @@ export default function (app, options) {
                 console.warn('Microsoft Teams is not installed');
 
                 document.body.insertAdjacentHTML('beforeend', `
-                    <div id="msteams-link-popup" style="position: absolute; top:${event.clientY + 24}px; left:${event.clientX + 24}px; z-index: 999; background: white; border: 1px solid gray; padding: 1em">
+                    <div id="${styles.msteamsLinkPopup}" style="top:${event.clientY + 24}px; left:${event.clientX + 24}px">
                         <p>
                             <b>Microsoft Teams</b> is not installed.<br />
                             Download the desktop app for the best experience or open in the browser.
@@ -36,7 +38,7 @@ export default function (app, options) {
         });
 
         document.addEventListener('mousedown', event => {
-            let popup = document.getElementById('msteams-link-popup');
+            let popup = document.getElementById(styles.msteamsLinkPopup);
 
             if (popup === null) return;
 
