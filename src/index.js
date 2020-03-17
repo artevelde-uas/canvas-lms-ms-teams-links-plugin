@@ -1,3 +1,5 @@
+import customProtocolCheck from 'custom-protocol-check';
+
 
 export default function (app, options) {
     app.addRouteListener('courses.*', function (params) {
@@ -15,12 +17,16 @@ export default function (app, options) {
             let url = link.href;
             let teamsUrl = url.replace(/^https?:\/\//, 'msteams://');
 
-            document.body.insertAdjacentHTML('beforeend', `
-                <div id="msteams-link-popup" style="position: absolute; top:${event.clientY + 24}px; left:${event.clientX + 24}px; z-index: 999; background: white; border: 1px solid gray; padding: 8px">
-                    <a class="btn" href="${teamsUrl}">Open in Teams</a>
-                    <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">Open in browser</a>
-                </div>
-            `);
+            customProtocolCheck(teamsUrl, () => {
+                console.warn('Microsoft Teams is not installed');
+
+                document.body.insertAdjacentHTML('beforeend', `
+                    <div id="msteams-link-popup" style="position: absolute; top:${event.clientY + 24}px; left:${event.clientX + 24}px; z-index: 999; background: white; border: 1px solid gray; padding: 1em">
+                        <a class="btn" href="https://teams.microsoft.com/downloads" target="_blank">Download Teams</a>
+                        <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">Open in browser</a>
+                    </div>
+                `);
+            });
         });
 
         document.addEventListener('mousedown', event => {
