@@ -1,0 +1,17 @@
+{
+    "name": "@artevelde-uas/canvas-lms-ms-teams-links-plugin",
+    "description": "Opens MS Teams links diectly in the Teams desktop app",
+    "keywords": [
+      "Canvas LMS"
+    ],
+    "author": "Renaat De Muynck <renaat.demuynck@arteveldehs.be>",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/artevelde-uas/canvas-lms-ms-teams-links-plugin.git"
+    },
+    "module": "src/index.js",
+    "files": [
+      "src/"
+    ]
+  }
+  
