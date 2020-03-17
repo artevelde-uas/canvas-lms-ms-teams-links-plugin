@@ -22,8 +22,14 @@ export default function (app, options) {
 
                 document.body.insertAdjacentHTML('beforeend', `
                     <div id="msteams-link-popup" style="position: absolute; top:${event.clientY + 24}px; left:${event.clientX + 24}px; z-index: 999; background: white; border: 1px solid gray; padding: 1em">
-                        <a class="btn" href="https://teams.microsoft.com/downloads" target="_blank">Download Teams</a>
-                        <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">Open in browser</a>
+                        <p>
+                            <b>Microsoft Teams</b> is not installed.<br />
+                            Download the desktop app for the best experience or open in the browser.
+                        </p>
+                        <div>
+                            <a class="btn btn-primary" href="https://teams.microsoft.com/downloads" target="_blank">Download Teams</a>
+                            <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">Open in browser</a>
+                        </div>
                     </div>
                 `);
             });
