@@ -29,8 +29,13 @@ export default function (app, options) {
                             Download the desktop app for the best experience or open in the browser.
                         </p>
                         <div>
-                            <a class="btn btn-primary" href="https://teams.microsoft.com/downloads" target="_blank">Download Teams</a>
-                            <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">Open in browser</a>
+                            <a class="btn btn-primary" href="https://teams.microsoft.com/downloads" target="_blank">
+                                <i class="icon-download"></i>
+                                Download Teams
+                            </a>
+                            <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">
+                                Open in browser
+                            </a>
                         </div>
                     </div>
                 `);
