@@ -19,6 +19,14 @@ export default function (app, options) {
             let url = link.href;
             let teamsUrl = url.replace(/^https?:\/\//, 'msteams://');
 
+            let cursorReset = function (bodyCursor, linkCursor) {
+                document.body.style.cursor = bodyCursor;
+                link.style.cursor = linkCursor;
+            }.bind(null, document.body.style.cursor, link.style.cursor);
+
+            document.body.style.cursor = 'progress';
+            link.style.cursor = 'progress';
+
             customProtocolCheck(teamsUrl, () => {
                 console.warn('Microsoft Teams is not installed');
 
@@ -39,6 +47,10 @@ export default function (app, options) {
                         </div>
                     </div>
                 `);
+
+                cursorReset();
+            }, () => {
+                cursorReset();
             });
         });
 
