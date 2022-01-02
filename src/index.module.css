@@ -1,9 +1,8 @@
-
 #msteams-link-popup {
-    position: absolute;
-    z-index: 999;
-    padding: 1em;
-    background-color: white;
-    border: 1px solid gray;
-    box-shadow: silver 0 .25em .5em;
+  position: absolute;
+  z-index: 999;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: silver 0 .25em .5em;
 }

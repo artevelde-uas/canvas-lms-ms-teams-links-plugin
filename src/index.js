@@ -1,10 +1,11 @@
+import { router } from '@artevelde-uas/canvas-lms-app';
 import customProtocolCheck from 'custom-protocol-check';
 
 import styles from './index.module.css';
 
 
-export default function (app, options) {
-    app.addRouteListener('courses.*', function (params) {
+export default function () {
+    router.onRoute('courses.*', () => {
         document.addEventListener('click', event => {
             let link = event.target.closest('a[href^="https://teams.microsoft.com/l/meetup-join/"]');
 
