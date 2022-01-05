@@ -62,17 +62,17 @@ export default function () {
 
             if (popup === null) return;
 
-            if (popup.contains(event.target)) {
-                if (event.target.closest('a') !== null) {
-                    popup.addEventListener('click', event => {
-                        popup.parentNode.removeChild(popup);
-                    }, { once: true });
-                }
+            if (!popup.contains(event.target)) {
+                popup.remove();
 
                 return;
             }
 
-            popup.parentNode.removeChild(popup);
+            if (event.target.closest('a') !== null) {
+                popup.addEventListener('click', event => {
+                    popup.remove();
+                }, { once: true });
+            }
         }, { useCapture: true });
     });
 }
