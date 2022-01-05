@@ -11,28 +11,35 @@ export default function () {
         document.addEventListener('click', event => {
             const link = event.target.closest('a[href^="https://teams.microsoft.com/l/meetup-join/"]');
 
+            // Only handle clicks on MS Teams links
             if (link === null) return;
 
             const popup = link.closest(`#${styles.msteamsLinkPopup}`);
 
+            // Don't do anything if the pop-up is allready being shown
             if (popup !== null) return;
 
             event.preventDefault();
 
+            // Generate a MS Teams link with correct protocol
             const url = link.href;
             const teamsUrl = url.replace(/^https?:\/\//, 'msteams://');
 
+            // Bind the current cursor styles to the cursor reset function
             const cursorReset = (function (bodyCursor, linkCursor) {
                 document.body.style.cursor = bodyCursor;
                 link.style.cursor = linkCursor;
             }).bind(null, document.body.style.cursor, link.style.cursor);
 
+            // Show 'progress' cursus style
             document.body.style.cursor = 'progress';
             link.style.cursor = 'progress';
 
+            // Detect whether the focus is stolen. If so, assume that the 'msteams:' protocol launches the MS Teams app
             customProtocolCheck(teamsUrl, () => {
                 console.warn('Microsoft Teams is not installed');
 
+                // Show a pop-up to download MS Teams or go to web view if not successful
                 document.body.insertAdjacentHTML('beforeend', `
                     <div id="${styles.msteamsLinkPopup}" style="top:${event.clientY + 24}px; left:${event.clientX + 24}px">
                         <p>
@@ -62,12 +69,14 @@ export default function () {
 
             if (popup === null) return;
 
+            // Close pop-up if mouse is pressed outside pop-up
             if (!popup.contains(event.target)) {
                 popup.remove();
 
                 return;
             }
 
+            // If a button is pressed, add a click handler to close pop-up
             if (event.target.closest('a') !== null) {
                 popup.addEventListener('click', event => {
                     popup.remove();
