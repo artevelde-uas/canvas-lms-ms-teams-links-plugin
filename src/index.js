@@ -7,23 +7,23 @@ import styles from './index.module.css';
 export default function () {
     router.onRoute('courses.*', () => {
         document.addEventListener('click', event => {
-            let link = event.target.closest('a[href^="https://teams.microsoft.com/l/meetup-join/"]');
+            const link = event.target.closest('a[href^="https://teams.microsoft.com/l/meetup-join/"]');
 
             if (link === null) return;
 
-            let popup = link.closest(`#${styles.msteamsLinkPopup}`);
+            const popup = link.closest(`#${styles.msteamsLinkPopup}`);
 
             if (popup !== null) return;
 
             event.preventDefault();
 
-            let url = link.href;
-            let teamsUrl = url.replace(/^https?:\/\//, 'msteams://');
+            const url = link.href;
+            const teamsUrl = url.replace(/^https?:\/\//, 'msteams://');
 
-            let cursorReset = function (bodyCursor, linkCursor) {
+            const cursorReset = (function (bodyCursor, linkCursor) {
                 document.body.style.cursor = bodyCursor;
                 link.style.cursor = linkCursor;
-            }.bind(null, document.body.style.cursor, link.style.cursor);
+            }).bind(null, document.body.style.cursor, link.style.cursor);
 
             document.body.style.cursor = 'progress';
             link.style.cursor = 'progress';
@@ -56,7 +56,7 @@ export default function () {
         });
 
         document.addEventListener('mousedown', event => {
-            let popup = document.getElementById(styles.msteamsLinkPopup);
+            const popup = document.getElementById(styles.msteamsLinkPopup);
 
             if (popup === null) return;
 
