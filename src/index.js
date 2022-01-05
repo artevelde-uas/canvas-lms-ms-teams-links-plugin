@@ -1,6 +1,8 @@
 import { router } from '@artevelde-uas/canvas-lms-app';
 import customProtocolCheck from 'custom-protocol-check';
 
+import __ from './i18n';
+
 import styles from './index.module.css';
 
 
@@ -34,16 +36,16 @@ export default function () {
                 document.body.insertAdjacentHTML('beforeend', `
                     <div id="${styles.msteamsLinkPopup}" style="top:${event.clientY + 24}px; left:${event.clientX + 24}px">
                         <p>
-                            <b>Microsoft Teams</b> is not installed.<br />
-                            Download the desktop app for the best experience or open in the browser.
+                            ${__('ms_teams_not_installed')}<br />
+                            ${__('download_desktop_app')}
                         </p>
                         <div>
                             <a class="btn btn-primary" href="https://teams.microsoft.com/downloads" target="_blank">
                                 <i class="icon-download"></i>
-                                Download Teams
+                                ${__('download_teams')}
                             </a>
                             <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">
-                                Open in browser
+                                ${__('open_in_browser')}
                             </a>
                         </div>
                     </div>
