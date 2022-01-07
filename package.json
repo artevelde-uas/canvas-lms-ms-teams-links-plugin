@@ -1,5 +1,6 @@
 {
     "name": "@artevelde-uas/canvas-lms-ms-teams-links-plugin",
+    "version": "1.0.0",
     "description": "Opens MS Teams links diectly in the Teams desktop app",
     "keywords": [
       "Canvas LMS"
