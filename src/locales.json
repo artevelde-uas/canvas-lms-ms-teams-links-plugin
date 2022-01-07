@@ -1,0 +1,26 @@
+{
+    "en": {
+        "ms_teams_not_installed": "<b>Microsoft Teams</b> is not installed.",
+        "download_desktop_app": "Download the desktop app for the best experience or open in the browser.",
+        "download_teams": "Download MS Teams",
+        "open_in_browser": "Open in browser"
+    },
+    "nl": {
+        "ms_teams_not_installed": "<b>Microsoft Teams</b> is niet geïnstalleerd.",
+        "download_desktop_app": "Download de desktop app voor de beste ervaring of open in de browser.",
+        "download_teams": "Download MS Teams",
+        "open_in_browser": "Open in browser"
+    },
+    "de": {
+        "ms_teams_not_installed": "<b>Microsoft Teams</b> ist nicht installiert.",
+        "download_desktop_app": "Laden Sie die Desktop-App für das beste Erlebnis herunter oder öffnen Sie sie im Browser.",
+        "download_teams": "MS Teams herunterladen",
+        "open_in_browser": "Im Browser öffnen"
+    },
+    "fr": {
+        "ms_teams_not_installed": "<b>Microsoft Teams</b> n'est pas installé.",
+        "download_desktop_app": "Téléchargez l'application de bureau pour la meilleure expérience ou ouvrez dans le navigateur",
+        "download_teams": "Téléchargez MS Teams",
+        "open_in_browser": "Ouvrir dans le navigateur"
+    }
+}
