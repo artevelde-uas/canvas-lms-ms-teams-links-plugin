@@ -1,4 +1,4 @@
-# Canvas LMS Better Left Menu Plug-in
+# Canvas LMS MS Teams link Pop-up Plug-in
 
 Plugin for the [Canvas LMS theme app](https://www.npmjs.com/package/@artevelde-uas/canvas-lms-app) that
 opens MS Teams links diectly in the Teams desktop app.
