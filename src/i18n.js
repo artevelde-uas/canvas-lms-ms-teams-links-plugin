@@ -3,7 +3,7 @@ import { addTranslations, getTranslator } from '@artevelde-uas/canvas-lms-app/se
 import translations from './locales.json';
 
 // Get the namespace from the package
-const namespace = 'IndicativePartialGradesPlugin';
+const namespace = require('../package.json').name;
 
 // Add all the translation files to the namespace
 addTranslations(namespace, translations);
