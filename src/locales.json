@@ -3,24 +3,40 @@
         "ms_teams_not_installed": "<b>Microsoft Teams</b> is not installed.",
         "download_desktop_app": "Download the desktop app for the best experience or open in the browser.",
         "download_teams": "Download MS Teams",
-        "open_in_browser": "Open in browser"
+        "open_in_browser": "Open in browser",
+        "package": {
+            "title": "Open MS Teams links in desktop app",
+            "description": "Opens MS Teams links directly in the Teams desktop app. If Teams is not installed, a pop-up will be shown, providing the user with the option to download it or use the web version."
+        }
     },
     "nl": {
         "ms_teams_not_installed": "<b>Microsoft Teams</b> is niet geïnstalleerd.",
         "download_desktop_app": "Download de desktop app voor de beste ervaring of open in de browser.",
         "download_teams": "Download MS Teams",
-        "open_in_browser": "Open in browser"
+        "open_in_browser": "Open in browser",
+        "package": {
+            "title": "Open MS Teams links in desktop app",
+            "description": "Opent MS Teams-links rechtstreeks in de Teams-desktopapp. Als Teams niet is geïnstalleerd, wordt een pop-up weergegeven die de gebruiker de mogelijkheid biedt om deze te downloaden of de webversie te gebruiken."
+        }
     },
     "de": {
         "ms_teams_not_installed": "<b>Microsoft Teams</b> ist nicht installiert.",
         "download_desktop_app": "Laden Sie die Desktop-App für das beste Erlebnis herunter oder öffnen Sie sie im Browser.",
         "download_teams": "MS Teams herunterladen",
-        "open_in_browser": "Im Browser öffnen"
+        "open_in_browser": "Im Browser öffnen",
+        "package": {
+            "title": "MS Teams-Links in der Desktop-App öffnen",
+            "description": "Öffnet MS Teams-Links direkt in der Teams-Desktop-App. Wenn Teams nicht installiert ist, wird ein Popup angezeigt, das dem Benutzer die Möglichkeit bietet, es herunterzuladen oder die Webversion zu verwenden."
+        }
     },
     "fr": {
         "ms_teams_not_installed": "<b>Microsoft Teams</b> n'est pas installé.",
         "download_desktop_app": "Téléchargez l'application de bureau pour la meilleure expérience ou ouvrez dans le navigateur",
         "download_teams": "Téléchargez MS Teams",
-        "open_in_browser": "Ouvrir dans le navigateur"
+        "open_in_browser": "Ouvrir dans le navigateur",
+        "package": {
+            "title": "Ouvrir des liens MS Teams dans l'application de bureau",
+            "description": "Ouvre des liens MS Teams directement dans l'application de bureau Teams. Si Teams n'est pas installé, une fenêtre contextuelle s'affichera, offrant à l'utilisateur la possibilité de le télécharger ou d'utiliser la version Web."
+        }
     }
 }
