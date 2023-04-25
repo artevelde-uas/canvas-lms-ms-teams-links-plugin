@@ -1,7 +1,7 @@
 import { router } from '@artevelde-uas/canvas-lms-app';
 import customProtocolCheck from 'custom-protocol-check';
 
-import __ from './i18n';
+import t from './i18n';
 
 import styles from './index.module.css';
 
@@ -42,16 +42,16 @@ export default function () {
             document.body.insertAdjacentHTML('beforeend', `
                 <div id="${styles.msteamsLinkPopup}" style="top:${event.clientY + 24}px; left:${event.clientX + 24}px">
                     <p>
-                        ${__('ms_teams_not_installed')}<br />
-                        ${__('download_desktop_app')}
+                        ${t('ms_teams_not_installed')}<br />
+                        ${t('download_desktop_app')}
                     </p>
                     <div>
                         <a class="btn btn-primary" href="https://teams.microsoft.com/downloads" target="_blank">
                             <i class="icon-download"></i>
-                            ${__('download_teams')}
+                            ${t('download_teams')}
                         </a>
                         <a class="btn" href="${url}" target="_blank" rel="noreferrer noopener">
-                            ${__('open_in_browser')}
+                            ${t('open_in_browser')}
                         </a>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ export default function () {
 
     return {
         ...require('../package.json'),
-        title: __('package.title'),
-        description: __('package.description')
+        title: t('package.title'),
+        description: t('package.description')
     };
 }
